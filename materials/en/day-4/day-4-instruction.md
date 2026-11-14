@@ -54,7 +54,7 @@ git checkout main
 git pull
 git checkout -b day-4
 ```
-**CHECK:** the Day 3 PR is merged (Day 2-3 files are in `docs/`). **IF IT FAILED:** the mentor gives fallback artifacts (`fallback/`) `<to be added>`.
+**CHECK:** the Day 3 PR is merged (Day 2-3 files are in `docs/`). **IF IT FAILED:** the mentor gives fallback artifacts ([`fallback/en/`](../../../fallback/en/README.md), examples in Ukrainian).
 
 **Download the templates** (needed in blocks 4, 5, 7). From your project root:
 
