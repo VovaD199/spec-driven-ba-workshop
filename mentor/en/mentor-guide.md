@@ -11,7 +11,7 @@
 
 ## 2. Before the course (1-2 weeks ahead)
 - [ ] Send [Day 0](../../materials/en/day-0/day-0-prepare.md), collect screenshots, chase the missing; go through the [Day 0 checklist](day-0-checklist.md).
-- [ ] Do Days 1-4 yourself on a clean machine (Windows and macOS): verify the install commands, `npm install`, `npm run dev`, `npm test`.
+- [ ] Do Days 1-4 yourself on a clean machine (Windows and macOS): verify the install commands, `npm install`, `npm run dev`, `npx jest --coverage=false` (the full `npm test` collects coverage and is very slow; see [verification and pilot](verification-and-pilot.md)).
 - [ ] Check the student template: https://github.com/VovaD199/spec-driven-ba-workshop-template (**Use this template** button, running the app).
 - [ ] **Figma:** find out who has an account; prepare the **mentor's canvas** with a ready mockup (view link, without the `?t=` token and without edit rights); walk through [Figma MCP](../../materials/en/day-4/figma-mcp-setup.md) on a clean machine.
 - [ ] Prepare Humanizer (skill) and check its file for external links, `.env` access, shell commands. Hand students only the verified one.
