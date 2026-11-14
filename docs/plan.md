@@ -1,4 +1,4 @@
-# Plan (DRAFT, awaiting approval)
+# Plan (APPROVED by owner 2026-11-14)
 
 1. Skeleton, path convention, link-check tool.
 2. Day 0, glossary, FAQ.

@@ -1,4 +1,4 @@
-# Specification (DRAFT, awaiting approval)
+# Specification (APPROVED by owner 2026-11-14)
 
 ## Goal
 A ready-to-run 4-day course (4 h/day) teaching business analysts and PMs to practice Spec-Driven Development with AI (Cursor), using BA strengths: elicitation, requirements quality, traceability, handoff.
@@ -24,6 +24,10 @@ The lf-client application itself.
 ## Acceptance
 Clean run-through of Days 0-4 by a new person within time; zero broken links; mentor guide covers 100% of days.
 
+## Decisions
+- Instructions link to `materials/...` (not `course/...`); nothing is moved into the lf-client template.
+- Public repository, languages UK + EN.
+- Figma mandatory; mentor link/file for students without accounts.
+
 ## Open questions
-- Is `course/` placed in the lf-client template, or do links point to `materials/`?
 - Figma plan limits (MCP call quota) for groups.
