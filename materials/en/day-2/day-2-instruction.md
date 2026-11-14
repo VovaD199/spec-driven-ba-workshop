@@ -301,4 +301,4 @@ Items 1-4 in the issue, 5-6 in the PR.
 | 200-225 | Block 7 |
 | 225-240 | Wrap-up, pointer to Day 3 |
 
-**Risks:** the agent invents line numbers (verify manually); Block 4 time (keep the pace, the table can be cut to 8 rules); a student with an empty Day 1 PR (give them the Day 1 artifacts from `fallback/`, `<to be added>`).
+**Risks:** the agent invents line numbers (verify manually); Block 4 time (keep the pace, the table can be cut to 8 rules); a student with an empty Day 1 PR (give them the Day 1 artifacts from [`fallback/en/`](../../../fallback/en/README.md)).

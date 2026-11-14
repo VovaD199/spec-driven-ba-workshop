@@ -226,4 +226,4 @@ Edit the list and save it to `docs/questions.md` (another commit in the same PR)
 | 205-230 | Steps 9-10 (PR, questions) |
 | 230-240 | Wrap-up, pointer to Day 2 |
 
-Risks and plan B: see `mentor/en/` (to be added in the mentor guide step).
+Risks and plan B: see the [mentor guide](../../../mentor/en/mentor-guide.md), section 4.

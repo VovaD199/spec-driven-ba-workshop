@@ -17,7 +17,7 @@
 - [ ] Prepare Humanizer (skill) and check its file for external links, `.env` access, shell commands. Hand students only the verified one.
 - [ ] Verify the Spec Kit / OpenSpec / BMAD table (Day 4, block 1) against the documentation.
 - [ ] Agree with the curator: submission channel, reply template, progress table.
-- [ ] Prepare fallback artifacts for each day `<to be added>`.
+- [ ] Fallback artifacts for each day: [`fallback/en/`](../../fallback/en/README.md) (examples in Ukrainian; update them per the "Known gaps" list in `fallback/uk/README.md`).
 - [ ] Plan B in case Cursor/network is missing: you show on the projector, students work with files.
 
 ## 3. How submission works
