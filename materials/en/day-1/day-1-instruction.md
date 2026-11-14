@@ -29,8 +29,8 @@ By the end you have:
 
 ## Step 1. Your own repository from the template (≈10 min)
 1. Sign in at https://github.com.
-2. Open the template `<lf-client template repository URL; given by the mentor>` and click **Use this template → Create a new repository**.
-3. Name: `lf-client-<your-name>` in Latin letters. Visibility: **Public** (the mentor must see your PR). Do not put passwords or tokens in the repository. **Create repository**.
+2. Open the template https://github.com/VovaD199/spec-driven-ba-workshop-template and click **Use this template → Create a new repository**.
+3. Name: `sdd-workshop-<your-name>` in Latin letters. Visibility: **Public** (the mentor must see your PR). Do not put passwords or tokens in the repository. **Create repository**.
 
 **CHECK:** your repository contains `README.md`, `package.json`, the `app/` folder.
 
@@ -40,14 +40,14 @@ Open a terminal. **COPY** (replace `<login>` and `<name>`):
 macOS / Linux:
 ```bash
 mkdir -p ~/Projects && cd ~/Projects
-git clone https://github.com/<login>/lf-client-<name>.git
-cd lf-client-<name>
+git clone https://github.com/<login>/sdd-workshop-<name>.git
+cd sdd-workshop-<name>
 ```
 Windows PowerShell (clone close to the disk root, paths are long):
 ```powershell
 mkdir C:\Projects -Force; cd C:\Projects
-git clone https://github.com/<login>/lf-client-<name>.git
-cd lf-client-<name>
+git clone https://github.com/<login>/sdd-workshop-<name>.git
+cd sdd-workshop-<name>
 ```
 
 **CHECK:** `git status` says `On branch main`.

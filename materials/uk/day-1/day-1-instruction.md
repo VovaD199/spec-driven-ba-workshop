@@ -29,8 +29,8 @@
 
 ## Крок 1. Власний репозиторій з шаблону (≈10 хв)
 1. Увійдіть на https://github.com.
-2. Відкрийте шаблон `<URL шаблонного репозиторію lf-client; вказує ментор>` і натисніть **Use this template → Create a new repository**.
-3. Назва: `lf-client-<ваше-імʼя>` латиницею. Видимість: **Public** (ментор має бачити PR). Не кладіть у репозиторій паролі й токени. **Create repository**.
+2. Відкрийте шаблон https://github.com/VovaD199/spec-driven-ba-workshop-template і натисніть **Use this template → Create a new repository**.
+3. Назва: `sdd-workshop-<ваше-імʼя>` латиницею. Видимість: **Public** (ментор має бачити PR). Не кладіть у репозиторій паролі й токени. **Create repository**.
 
 **ПЕРЕВІРТЕ:** у вашому репозиторії є `README.md`, `package.json`, папка `app/`.
 
@@ -40,14 +40,14 @@
 macOS / Linux:
 ```bash
 mkdir -p ~/Projects && cd ~/Projects
-git clone https://github.com/<логін>/lf-client-<імʼя>.git
-cd lf-client-<імʼя>
+git clone https://github.com/<логін>/sdd-workshop-<імʼя>.git
+cd sdd-workshop-<імʼя>
 ```
 Windows PowerShell (клонуйте ближче до кореня диска, шляхи довгі):
 ```powershell
 mkdir C:\Projects -Force; cd C:\Projects
-git clone https://github.com/<логін>/lf-client-<імʼя>.git
-cd lf-client-<імʼя>
+git clone https://github.com/<логін>/sdd-workshop-<імʼя>.git
+cd sdd-workshop-<імʼя>
 ```
 
 **ПЕРЕВІРТЕ:** `git status` каже `On branch main`.
