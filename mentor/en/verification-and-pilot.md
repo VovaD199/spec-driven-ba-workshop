@@ -37,7 +37,7 @@ You need: a computer or virtual machine without Git, Node and Cursor; a GitHub a
 |---|---|---|---|---|---|
 | 7 | Repository from the template | **Use this template** at https://github.com/VovaD199/spec-driven-ba-workshop-template, name `sdd-workshop-<name>`, public | repository created | | |
 | 8 | Clone | Windows: `mkdir C:\Projects -Force; cd C:\Projects`; `git clone …`; macOS: `mkdir -p ~/Projects && cd ~/Projects` | folder with files; **no** password prompt | | |
-| 9 | Dependencies | `cp .env.example .env` (PowerShell: `Copy-Item`), `npm install` | finishes without an error; record the time | | |
+| 9 | Dependencies | `cp .env.example .env` (PowerShell: `Copy-Item`), `npm ci` | finishes without an error; `git status` does **not** show `package-lock.json`; record the time | | |
 | 10 | Run | `npm run dev` | http://localhost:3000 opens (uk and en) | | |
 | 11 | Second terminal | open a new terminal without stopping the server | the server keeps running | | |
 | 12 | Tests | `npx jest --coverage=false` | all pass (on Linux: 290 suites, 1434 tests, all green, ≈30 s). The full `npm test` turns coverage on and **did not finish in 250 s** on Linux: do not give it to students, only `--coverage=false`; record the time on your OS | | |
