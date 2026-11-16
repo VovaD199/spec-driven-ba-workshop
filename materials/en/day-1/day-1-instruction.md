@@ -208,7 +208,7 @@ Edit the list (delete lines like "If you want, I can format this as a table…":
 git status
 git add docs/questions.md
 git commit -m "docs: add questions for the client (day 1)"
-git push
+git push -u origin day-1
 ```
 The PR updates by itself: `docs/questions.md` appears in the **Files changed** tab. You do not need to open anything else. Write a comment on the PR: "Added questions for the client (step 10)".
 

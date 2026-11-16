@@ -272,7 +272,7 @@ You are on branch `day-3`:
 git status
 git add docs/figma-contact-form-analysis.md
 git commit -m "docs: add Figma mockup analysis (day 3)"
-git push
+git push -u origin day-3
 ```
 On GitHub: **Compare & pull request → Create pull request** (from `day-3` into `main` of your repository). Send the PR link to the mentor.
 
