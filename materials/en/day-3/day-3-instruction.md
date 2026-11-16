@@ -10,6 +10,8 @@ You can:
 
 **Submission (PR):** `docs/poc-notes.md`, `docs/poc-summary-<date>.md`, `docs/figma-contact-form-analysis.md`. The PR has **no code changes**.
 
+> The file `docs/contact-form-feature.md` is already in `main` after Day 2. On Day 3 you only **read** it (the source of RULE-IDs, AC and the Q-NN numbering) and **do not commit or change** it: the new Day 3 questions go into `docs/figma-contact-form-analysis.md`. If `git status` shows `docs/contact-form-feature.md` as modified, revert it: `git restore docs/contact-form-feature.md`.
+
 ## Two tracks and time budget (240 min)
 | Block | Min | Base | Fast (extra) |
 |---|---|---|---|
@@ -259,7 +261,7 @@ Integration; Edge cases. Format: Q-NN | [Category] question | who answers.
 Add to the "Questions by category" section. Continue numbering after Q-NN in
 @docs/contact-form-feature.md, do not duplicate existing ones.
 ```
-**CHECK:** ≥10 questions by category; your own observations stand next to the AI analysis; invented content removed.
+**CHECK:** ≥10 questions by category; your own observations stand next to the AI analysis; invented content removed. `docs/contact-form-feature.md` is unchanged (it is only the numbering source).
 
 ## B6. Preparation for Day 4 (5 min)
 Figma MCP sees only a design **on the canvas of a regular Figma file**. In Figma Make click **Open in canvas**, paste the design into a new file, right-click the main frame → **Copy link to selection** and save the link. (The button name depends on the interface version.) We connect Figma MCP **on Day 4 with the mentor** (block 0): nothing is needed at home. No account: the mentor gives you the canvas link.
