@@ -272,7 +272,7 @@ Figma MCP бачить лише дизайн **на полотні звичай�
 git status
 git add docs/figma-contact-form-analysis.md
 git commit -m "docs: add Figma mockup analysis (day 3)"
-git push
+git push -u origin day-3
 ```
 На GitHub: **Compare & pull request → Create pull request** (з `day-3` у `main` вашого репозиторію). Надішліть ментору посилання на PR.
 
