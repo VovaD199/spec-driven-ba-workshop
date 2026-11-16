@@ -180,6 +180,8 @@ REQUIREMENT: <the same requirement>
 ```
 **Save the result** in one file `docs/rewrite-compare.md`: table | Format | Where it first exposed a gap ★ | What it hid | What is hardest to trace | Who it suits (Product / engineers / AI) |. This is submitted to the mentor.
 
+**The same requirement:** rewrite all three formats for the **same** requirement (the email news subscription from the text above), not different ones: otherwise comparing the formats is meaningless.
+
 **Discussion:** which format "hid" the privacy rule? Where did scope appear unprompted? Which would you paste into an AI tool and why?
 
 # Block 5. Specification, NFR, traceability matrix (35 min)
@@ -200,10 +202,10 @@ Requirements:
 - Propose no technical solutions (DB, libraries).
 - Do not touch section 10.
 ```
-**CHECK:** read it **in full**, fix inaccuracies, remove invented content, **and verify the IDs did not change** (compare with Day 2).
+**CHECK:** read it **in full**, fix inaccuracies, remove invented content, **and verify the IDs did not change** (compare with Day 2). If sections of `docs/figma-contact-form-analysis.md` from Day 3 are still empty, fill them **before submission**.
 
 ### Step 3. NFR (≈8 min)
-For a form with a phone and a CV these are personal data. Add at least 4 requirements to the NFR section: privacy (what we collect, why, for how long), upload security (file type and content, malicious files), accessibility, localization. Take answers from the client conversation (Day 2); record what you did not hear as Q-NN with an owner.
+For a form with a phone and a CV these are personal data. Do **not renumber** NFRs whose IDs you already had on Day 2: keep the same numbers and meaning; append new NFRs at the end with the next numbers. Add at least 4 requirements to the NFR section: privacy (what we collect, why, for how long), upload security (file type and content, malicious files), accessibility, localization. Take answers from the client conversation (Day 2); record what you did not hear as Q-NN with an owner.
 
 ### Step 4. Traceability matrix (≈10 min)
 Add at the end of the specification a table following `docs/templates/traceability-matrix-template.md`:
@@ -265,7 +267,7 @@ List 8-15 edge cases (validation, time, data and state, privacy, notifications, 
 For each: trigger and expected behavior. If the specification is silent: "Specification is silent: question Q-NN".
 ```
 ### Step 3. Audit (the main part, 8 min)
-Pick **5 claims labelled Grounded** and find a quote in the specification for each. Fill the table in `docs/ai-check-notes.md`. If there is no quote, the claim is **not Grounded**: AI dressed an invention up as a confirmed fact. This is the most common substitution. Also verify all **numbers** (file size, retention terms) in the answer against the specification.
+Pick **5 claims labelled Grounded** and find a quote in the specification for each. Fill the table in `docs/ai-check-notes.md`. If there is no quote, the claim is **not Grounded**: AI dressed an invention up as a confirmed fact. This is the most common substitution. You fill in the "Confirmed?" and "My verdict" columns and all four sections of `docs/ai-check-notes.md` yourself; a file with empty sections is not accepted. Also verify all **numbers** (file size, retention terms) in the answer against the specification.
 
 ### Step 4. Close a gap
 Take the worst invention and add to the specification **what closes it**: a rule you actually heard from the client, or a question `Q-NN`. **Do not add a rule just to get rid of Invented:** without business confirmation it is only a rewording of an invention. Repeat the request and record what changed.
@@ -309,6 +311,8 @@ Make sure **IDs, numbers and the words "must / must not" did not change**. If th
 Assess @docs/handoff-contact-form.md against the Definition of Ready: section | ready / not ready | what is missing.
 ```
 The pack is ready for refinement (**DoR**) when: the description is clear without context; all Blockers are addressed or flagged; every AC is verifiable; the matrix has no orphans; open questions have owners and dates; "Evidence" honestly says what was and was not proven. Fix blockers before submission. Record in the pack the commit (`git rev-parse --short HEAD`) for which it was DoR.
+
+**Pre-submission checklist:** the DoR table is in the pack; the commit is recorded; all 9 sections of the pack are filled; there are no empty sections in `docs/ai-check-notes.md` and `docs/figma-contact-form-analysis.md`.
 
 Record the commit in the pack (`git rev-parse --short HEAD`): this command shows the short number of the current commit (for example, `a1b2c3d`). The set of documents changes over time. A note "DoR passed at commit a1b2c3d" lets you know exactly, a month later, which version was ready and whether it was changed after the check.
 
