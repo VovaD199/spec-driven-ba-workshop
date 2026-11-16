@@ -267,6 +267,8 @@ Add to the "Questions by category" section. Continue numbering after Q-NN in
 Figma MCP sees only a design **on the canvas of a regular Figma file**. In Figma Make click **Open in canvas**, paste the design into a new file, right-click the main frame → **Copy link to selection** and save the link. (The button name depends on the interface version.) We connect Figma MCP **on Day 4 with the mentor** (block 0): nothing is needed at home. No account: the mentor gives you the canvas link.
 
 # Part C. Submission (10 min)
+**CHECK before the commit:** **every** section of `docs/figma-contact-form-analysis.md` is filled (own observations, hidden assumptions, missing states, risks, ≥10 questions with numbering continuing from Day 2); no empty headings.
+
 You are on branch `day-3`:
 ```bash
 git status
