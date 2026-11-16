@@ -208,7 +208,7 @@ git push -u origin day-1
 git status
 git add docs/questions.md
 git commit -m "docs: add questions for the client (day 1)"
-git push
+git push -u origin day-1
 ```
 PR оновиться сам: у вкладці **Files changed** з'явиться `docs/questions.md`. Нічого більше відкривати не треба. Напишіть у коментарі до PR: «Додано питання до замовника (крок 10)».
 
