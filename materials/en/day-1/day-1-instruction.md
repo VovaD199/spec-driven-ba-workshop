@@ -72,11 +72,11 @@ In the Cursor terminal, one by one:
 
 ```bash
 cp .env.example .env         # Windows PowerShell: Copy-Item .env.example .env
-npm install
+npm ci
 npm run dev
 ```
 - `.env` holds local settings; it does not go to Git (it is in `.gitignore`). Defaults are enough.
-- `npm install` downloads libraries listed in `package.json`; the first run takes up to a few minutes and a `node_modules/` folder appears. npm warnings are normal, errors are not.
+- `npm ci` installs libraries of exactly the versions recorded in `package-lock.json` and **does not change** that file (unlike `npm install`, which sometimes rewrites it: then it shows up in your changes and you must not commit it). The first run takes up to a few minutes and a `node_modules/` folder appears. npm warnings are normal, errors are not.
 - `npm run dev` starts a local server and **occupies this terminal**. Open a **second terminal** for other commands: the `+` button in the terminal panel. Stop the server with `Ctrl+C`.
 
 Open http://localhost:3000/en in the browser.
@@ -85,16 +85,16 @@ Open http://localhost:3000/en in the browser.
 
 **IF IT FAILED:**
 - Port 3000 busy: use the address shown in the terminal.
-- `npm install` fails: `node -v` must be 22+; retry without VPN.
+- `npm ci` fails: `node -v` must be 22+; retry without VPN. If npm says `package.json` and `package-lock.json` are out of sync, run `npm install` and tell the mentor; do **not** commit `package-lock.json` in that case (`git restore package-lock.json`).
 - `running scripts is disabled` (Windows): `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`.
 - Blank page after changes: `Ctrl+C` and `npm run dev` again.
 - Not working after 20 min: the mentor shows the running app on screen and you continue (step 5 onward only needs files).
 
 The database lives in memory and is refilled with demo data on every start, so nothing can be permanently broken.
 
-**What is in the project (short):** `package.json` (dependencies and commands), `app/` (pages, API, services), `i18n/messages/` (uk/en texts), `scripts/` (demo data), `node_modules/` (libraries, appears after `npm install`).
+**What is in the project (short):** `package.json` (dependencies and commands), `app/` (pages, API, services), `i18n/messages/` (uk/en texts), `scripts/` (demo data), `node_modules/` (libraries, appears after `npm ci`).
 
-> For Python developers: `npm install` ≈ `pip install -r requirements.txt`, `package.json` ≈ `requirements.txt`, `node_modules/` ≈ `.venv/`, `npm run dev` ≈ `python main.py`.
+> For Python developers: `npm ci` ≈ `pip install -r requirements.txt` (exact versions from the lock file), `package.json` ≈ `requirements.txt`, `node_modules/` ≈ `.venv/`, `npm run dev` ≈ `python main.py`.
 
 ## Step 5. Get to know the project through the agent (≈15 min)
 Open a new agent chat.
@@ -179,6 +179,8 @@ git push -u origin day-1
 ```
 Authentication: see Day 0, section 2. Then on GitHub click **Compare & pull request → Create pull request** (from `day-1` into `main` of **your** repository). Send the PR link to the mentor (channel: `<given by the mentor>`).
 
+> You will add the file `docs/questions.md` to **this same PR** in step 10, so do not merge the PR until you have done step 10 and received the mentor's feedback.
+
 **PR requirements:**
 - from branch `day-1` into `main` of your repository (not the template), repository is public;
 - title: `Day 1: <short what was done>`;
@@ -186,7 +188,7 @@ Authentication: see Day 0, section 2. Then on GitHub click **Compare & pull requ
 - **Files changed** has only the day's files; no `.env`, `node_modules`, `.cursor/mcp.json`, tokens;
 - after the mentor's feedback click **Merge pull request** so tomorrow starts from an up-to-date `main`. **Do not merge before the mentor's feedback.**
 
-**CHECK before committing:** `git status` shows no `.env`, `node_modules`.
+**CHECK before committing:** `git status` shows no `.env`, `node_modules`. If `package-lock.json` is among the changed files, do not add it: `git restore package-lock.json`.
 
 **IF IT FAILED (git push):** authentication error → `gh auth login`; `src refspec day-1 does not match` → you did not create the branch or commit anything: `git checkout -b day-1`, then `git add` and `git commit`. After 20 min: send the files to the mentor (screenshot / zip); this counts as a submission marked "no PR".
 
@@ -199,7 +201,29 @@ Read AGENTS.md and docs/architecture.md. Compose a list of 5 questions for the c
 (Liatoshynsky Foundation) whose answers are not in the code. For each question state:
 why it matters (which decision depends on the answer) and who can answer it.
 ```
-Edit the list and save it to `docs/questions.md` (another commit in the same PR). **Quality criterion:** questions are open ("why", "who", "what happens if…"), without a hinted answer; at least one concerns the privacy of visitor data. You will need this document on Day 2.
+Edit the list (delete lines like "If you want, I can format this as a table…": that is chat text, not a question) and save it to the file `docs/questions.md`.
+
+**Add the file to the same Pull Request** (it is still open: you merge it only after the mentor's feedback). In the terminal, on branch `day-1`:
+```bash
+git status
+git add docs/questions.md
+git commit -m "docs: add questions for the client (day 1)"
+git push
+```
+The PR updates by itself: `docs/questions.md` appears in the **Files changed** tab. You do not need to open anything else. Write a comment on the PR: "Added questions for the client (step 10)".
+
+**IF THE PR IS ALREADY MERGED** (for example you clicked **Merge** earlier): create a new branch and a second PR:
+```bash
+git checkout main
+git pull
+git checkout -b day-1-questions
+git add docs/questions.md
+git commit -m "docs: add questions for the client (day 1)"
+git push -u origin day-1-questions
+```
+Then **Compare & pull request** from `day-1-questions` into `main` of your repository and send the link to the mentor.
+
+**Quality criterion:** questions are open ("why", "who", "what happens if…"), without a hinted answer; at least one concerns the privacy of visitor data. You will need this document on Day 2.
 
 ## Review criteria (for the mentor)
 1. `AGENTS.md` and the diagram are in the PR and match the real project (no invented pages).

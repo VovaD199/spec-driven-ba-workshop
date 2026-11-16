@@ -37,7 +37,7 @@
 |---|---|---|---|---|---|
 | 7 | Репозиторій із шаблону | **Use this template** на https://github.com/VovaD199/spec-driven-ba-workshop-template, назва `sdd-workshop-<ім'я>`, публічний | репозиторій створено | | |
 | 8 | Клон | Windows: `mkdir C:\Projects -Force; cd C:\Projects`; `git clone …`; macOS: `mkdir -p ~/Projects && cd ~/Projects` | папка з файлами; **без** запиту пароля | | |
-| 9 | Залежності | `cp .env.example .env` (PowerShell: `Copy-Item`), `npm install` | завершується без помилки; зафіксувати час | | |
+| 9 | Залежності | `cp .env.example .env` (PowerShell: `Copy-Item`), `npm ci` | завершується без помилки; `git status` **не показує** `package-lock.json`; зафіксувати час | | |
 | 10 | Запуск | `npm run dev` | http://localhost:3000 відкривається (uk і en) | | |
 | 11 | Другий термінал | відкрити новий термінал, не зупиняючи сервер | сервер лишається запущеним | | |
 | 12 | Тести | `npx jest --coverage=false` | усі проходять (на Linux: 290 наборів, 1434 тести, усі зелені, ≈30 с). Повний `npm test` ввімкнув збір покриття і **не завершився за 250 с** на Linux: студентам його не давайте, лише `--coverage=false`; запишіть час на своїй ОС | | |
