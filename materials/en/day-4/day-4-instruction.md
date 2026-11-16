@@ -310,6 +310,8 @@ Assess @docs/handoff-contact-form.md against the Definition of Ready: section | 
 ```
 The pack is ready for refinement (**DoR**) when: the description is clear without context; all Blockers are addressed or flagged; every AC is verifiable; the matrix has no orphans; open questions have owners and dates; "Evidence" honestly says what was and was not proven. Fix blockers before submission. Record in the pack the commit (`git rev-parse --short HEAD`) for which it was DoR.
 
+Record the commit in the pack (`git rev-parse --short HEAD`): this command shows the short number of the current commit (for example, `a1b2c3d`). The set of documents changes over time. A note "DoR passed at commit a1b2c3d" lets you know exactly, a month later, which version was ready and whether it was changed after the check.
+
 # Block 9. Submission and wrap-up (15 min)
 ```bash
 git status
