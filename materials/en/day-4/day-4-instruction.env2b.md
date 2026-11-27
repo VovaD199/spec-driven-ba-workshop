@@ -314,6 +314,37 @@ Assess @docs/handoff-contact-form.md against the Definition of Ready: section | 
 ```
 The pack is ready for refinement (**DoR**) when: the description is clear without context; all Blockers are addressed or flagged; every AC is verifiable; the matrix has no orphans; open questions have owners and dates; "Evidence" honestly says what was and was not proven. Fix blockers before submission. Record in the pack the commit (`git rev-parse --short HEAD`) for which it was DoR.
 
+### Step 4 (optional, ≈15-20 min). Handoff into GitHub Issues
+Your repository is public and you connected `gh` on Day 0, so you can hand the pack off the way a real tracker works: epic, stories, AC, labels. This practises the mechanics; for Jira or Azure DevOps they are the same. **Do not add** this step to the Day 4 PR, the result is the issues in your repository.
+
+| What | In GitHub | Content |
+|---|---|---|
+| Epic | 1 issue with the `epic` label | link to the original request (the Day 2 issue), list of stories as a checklist `- [ ] #12`, goal and metric |
+| Story | 1 issue per group of AC, `story` label | title "As a visitor, I want …, so that …"; body: RULE-ID, AC as checkboxes (Given/When/Then), NFR, test idea, link to the spec section |
+| Open question | 1 issue, `question` label | Q-NN, owner (role), date, related AC |
+
+Write IDs (RULE, AC, Q, NFR) in the title and body, for example `[RULE-03] …`, not in labels: only three labels (`epic`, `story`, `question`), GitHub searches by text.
+
+**Limit:** 1 epic and 3-4 stories, otherwise the step drags on. The repository is public: fictional data only, no tokens or private contacts.
+
+**Create them yourself with `gh`, not through AI with GitHub MCP.** It is a write to a public repository and a human must read every call. AI only prepares the text in chat:
+```text
+From @docs/handoff-contact-form.md and @docs/spec-contact-form.md prepare the text of 3-4 stories (title "As a visitor, I want …, so that …",
+RULE-ID, AC as checkboxes, NFR, test idea), the epic text with the list of stories, and issue texts for the Q-NN questions.
+Every AC from the specification must be in exactly one story. Create nothing, only show the text. Keep IDs unchanged, invent no new requirements.
+```
+Labels first, then stories, and the epic last (so you can paste the numbers into the checklist):
+```bash
+gh label create epic
+gh label create story
+gh label create question
+gh issue create --title "[RULE-03] As a visitor, I want …, so that …" --body "<text>" --label story
+gh issue create --title "Epic: contact form" --body "<text with a - [ ] #N list>" --label epic
+```
+You can create the first story manually on github.com.
+
+**Criterion:** the epic links to all stories; every AC from the specification is in exactly one story; every story has a RULE-ID; issues for the Q-NN questions are created; no requirement that is absent from the specification. If you have Jira or Azure DevOps, you can make an import CSV as an extra task.
+
 **Pre-submission checklist:** the DoR table is in the pack; the commit is recorded; all 9 sections of the pack are filled; there are no empty sections in `docs/ai-check-notes.md` and `docs/figma-contact-form-analysis.md`.
 
 Record the commit in the pack (`git rev-parse --short HEAD`): this command shows the short number of the current commit (for example, `a1b2c3d`). The set of documents changes over time. A note "DoR passed at commit a1b2c3d" lets you know exactly, a month later, which version was ready and whether it was changed after the check.
